@@ -32,4 +32,6 @@ Route::group(['middleware' => 'extract.token'], function () {
     Route::apiResource('products', ProductController::class)->except([
         'create', 'store', 'update', 'destroy'
     ]);
+    Route::post('products/upload/local', [ProductController::class, 'uploadImageLocal'])->name('upload.local');
+    Route::post('products/upload/public', [ProductController::class, 'uploadImagePublic'])->name('upload.public');
 });

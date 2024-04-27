@@ -73,4 +73,20 @@ class ProductController extends Controller
             "message" => "Product with ID: " . $id . " deleted successfully"
         ]);
     }
+
+    public function uploadImageLocal(Request $request)
+    {
+        return response()->json([
+            "message" => "Image successfully stored in local disk
+            driver"
+        ]);
+    }
+
+    public function uploadImagePublic(Request $request)
+    {
+        return response()->json([
+            "message" => "Image successfully stored in public disk
+            driver"
+        ]);
+    }
 }
